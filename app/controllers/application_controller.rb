@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
     def authenticate_user
+      client_id = '86b960e0d2f8aa862703'
       redirect_to "https://github.com/login/oauth/authorize?client_id=#{ENV['GITHUB_CLIENT']}&scope=repo" if !logged_in?
     end
 
